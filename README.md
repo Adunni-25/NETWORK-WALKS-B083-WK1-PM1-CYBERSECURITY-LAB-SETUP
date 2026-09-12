@@ -95,6 +95,7 @@ Oracle VirtualBox was installed as the virtualization platform for creating and 
 ```text
 VirtualBox 7.2.16-174877
 ```
+![VirtualBox Installed](screenshots/virtual-box-installation.png)
 
 The host operating system used for this project is **Windows**.
 
@@ -107,6 +108,7 @@ A dedicated NAT Network was created in VirtualBox using the required subnet:
 ```text
 Network: 10.0.0.0/24
 ```
+![VirtualBox NAT Network Configuration](screenshots/nat-network.png)
 
 The NAT Network provides a virtual networking environment where machines connected to the network can communicate with one another while still having access to external networks.
 
@@ -128,6 +130,8 @@ The VirtualBox VM settings were also configured to support:
 
 A shared `/downloads` folder was configured to allow files to be transferred between the Windows host and the Kali Linux virtual machine.
 
+The Kali Linux when fully configured looks like this: 
+![Kali Linux](screenshots/kali-linux.png)
 ---
 
 ## Step 5. Configure the Kali Linux Network
@@ -136,12 +140,11 @@ Kali Linux was configured with the required IPv4 address:
 
 ```text
 IP Address: 10.0.0.2
-Subnet:     255.255.255.0
 CIDR:       /24
 ```
 
 The network configuration was then verified to ensure that the Kali Linux machine could communicate through the virtual network and access the Internet.
-
+![Kali Linux Network Configuration](screenshots/ip-configuration.png)
 ---
 
 ## Step 6. Create a VM Snapshot
@@ -150,10 +153,8 @@ After completing the initial configuration, a snapshot was created for the Kali 
 
 The snapshot serves as a clean baseline that can be restored if future cybersecurity exercises modify the VM or cause configuration issues.
 
-Example snapshot name:
-
 ```text
-Clean Kali Lab Baseline
+VM
 ```
 
 ---
